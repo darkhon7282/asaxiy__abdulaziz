@@ -3,11 +3,50 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+
+import rootReducer from './context/reducer';
+import { legacy_createStore as createStore } from 'redux';
+import BackToTop from './components/back-to-top/BackToTop';
+
+// Redux-persists - Redux va localstorage bilan ishlash
+import { persistStore, persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
+import { PersistGate } from 'redux-persist/integration/react'
+
+const persistConfig = {
+  key: 'root',
+  storage,
+  whitelist: ["cart", "heart", "auth"],
+  blacklist: ["water"]
+}
+ 
+const persistedReducer = persistReducer(persistConfig, rootReducer)
+let store = createStore(persistedReducer)
+let persistor = persistStore(store)
+
+
+ 
+
+
+
+
+
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+    <BrowserRouter>
+    <BackToTop/>
+    <PersistGate loading={null} persistor={persistor}>
+        <App />
+      </PersistGate>
+    </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );
 

@@ -1,0 +1,9 @@
+.create h2{
+    margin-left: 420px;
+    transform: translateY(-20px);
+}
+.create-from{
+    width: 100%;
+    min-height: 550px;
+    margin: auto 45px;
+}

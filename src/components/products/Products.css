@@ -1,0 +1,59 @@
+.product{
+    width: 100%;
+    height: 650px;
+    display: flex;
+    flex-wrap: wrap;
+    background: #eaeef4;
+}
+.product__about{
+    width: 220px;
+    height: 280px;
+    position: relative;
+    margin: 20px;
+    background: #fff;
+    border-radius: 8px;
+}
+.product .product__about img{
+    width: 130px;
+    height: 140px;
+    margin-left: 35px;
+    margin-top: 10px;
+}
+.product__about h3{
+    margin-left: 12px;
+    font-size: 15px;
+}
+.product__about del{
+    margin-left: 12px;
+    margin-top: 3px;
+    color: #af5679;
+}
+.product__about h4{
+    margin-left: 12px;
+    margin-top: 3px;
+}
+.product__star{
+    margin-left: 12px;
+    color: dodgerblue;
+}
+.shop{
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    font-size: 18px;
+}
+.product__heart{
+    position: absolute;
+    top: 45px;
+    right: 10px;
+    font-size: 18px;
+}
+.product__btn{
+    padding: 9px 35px;
+    margin-left: 12px;
+    margin-top: 4px;
+    border-radius: 6px;
+    border: none;
+    background: #008dff;
+    color: #fff;
+}

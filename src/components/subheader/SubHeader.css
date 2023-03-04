@@ -1,0 +1,27 @@
+.subh{
+    width: 100%;
+    height: 55px;
+    border: 2px solid #d2d2d2;
+}
+.subh .collection{
+    display: flex;
+    margin-left: 60px;
+    transform: translateY(-35px);
+}
+.subh .collection .item{
+    list-style: none;
+    margin: 50px;
+    font-weight: 700;
+    font-size: 18px;
+}
+.subh .collection .item svg{
+    margin-right: 10px;
+    transform: translateY(2px);
+    color: dodgerblue;
+}
+
+@media screen and (max-width: 990px){
+    .subh{
+        display: none;
+    }
+}
